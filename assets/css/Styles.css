@@ -59,10 +59,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   padding: 60px 20px;
   text-align: center;
-  z-index: 1;
 }
 
 .tagline {
@@ -83,6 +82,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  width: 280px; /* fixed equal width on desktop */
+  max-width: 90%;
+  text-align: center;
 }
 
 .glow-button:hover {
@@ -198,10 +200,29 @@ body {
 }
 
 @media (max-width: 480px) {
+  .glow-button {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 40px 10px;
+    gap: 20px;
+  }
+
   .logo-title-wrapper {
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
+}
+
 
   .main-content {
     padding: 40px 10px;
