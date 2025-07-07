@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 15px 10px;
   background: #142966;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -129,7 +129,7 @@ body {
 .footer {
   background: linear-gradient(to right, #003366, #002244);
   color: #ffffff;
-  padding: 15px 5%; /* Reduced from 40px 10% 20px 10% */
+  padding: 10px 5px 5px 5px;
   font-size: 0.85rem; /* Slightly smaller text */
   margin: 0 auto;
   width: 85%; /* Narrower than full width (was 90%) */
