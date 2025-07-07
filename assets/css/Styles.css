@@ -78,6 +78,7 @@ body {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row; /* Default to row layout */
 }
 
 /* Button Styling */
@@ -87,7 +88,7 @@ body {
   background-color: white;
   color: #003366;
   border: 2px solid #ccc;
-  padding: 0.6rem 1.6rem;
+  padding: 12px 1.6rem; /* Made padding consistent vertically */
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 12px;
@@ -95,6 +96,33 @@ body {
   transition: all 0.3s ease;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  height: auto; /* Let content determine height */
+  min-height: 50px; /* Set minimum height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .glow-button {
+    width: 100%; /* Full width buttons on mobile */
+    max-width: 100%;
+    padding: 14px 1.6rem; /* Slightly larger tap target for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .glow-button {
+    font-size: 1rem; /* Slightly smaller font on very small devices */
+    padding: 12px 1.2rem;
+  }
 }
 
 .glow-button:hover {
