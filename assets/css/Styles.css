@@ -133,7 +133,7 @@ body {
   font-size: 0.8rem; /* Slightly smaller text */
   margin: 0 auto;
   width: 85%; /* Narrower than full width (was 90%) */
-  max-width: 1100px; /* Reduced from 1400px */
+  max-width: 1400px; /* Reduced from 1400px */
   border-radius: 12px 12px 0 0; /* Smaller radius */
 }
 
