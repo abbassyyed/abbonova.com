@@ -12,7 +12,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  padding-bottom: 20px;
 }
 
 /* Header */
@@ -20,110 +19,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px;
   background: #142966;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
 }
 
-.logo-title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 15px 4px rgba(179, 136, 235, 0.5);
-  cursor: pointer;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* Hero Section */
+/* Main Content - Centered between header and footer */
 .main-content {
   flex: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
   align-items: center;
-  gap: 30px;
-  padding: 40px 5% 60px 5%;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.tagline {
-  font-size: 1.1rem;
-  color: #ffffffcc;
-  margin-top: -20px;
-}
-
-/* Button Container */
-.button-group {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row; /* Default to row layout */
-}
-
-/* Button Styling */
-.glow-button {
-  flex: 1 1 220px;
-  max-width: 220px;
-  background-color: white;
-  color: #003366;
-  border: 2px solid #ccc;
-  padding: 12px 1.6rem; /* Made padding consistent vertically */
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  height: auto; /* Let content determine height */
-  min-height: 50px; /* Set minimum height for consistency */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .button-group {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    align-items: center;
-    width: 100%;
-  }
-  
-  .glow-button {
-    width: 100%; /* Full width buttons on mobile */
-    max-width: 100%;
-    padding: 14px 1.6rem; /* Slightly larger tap target for mobile */
-  }
-}
-
-.glow-button:hover {
-  background-color: #f2eaff;
-  color: #5a2ca0;
-  border-color: #b388eb;
-  box-shadow: 0 0 18px 6px rgba(179, 136, 235, 0.5);
-  transform: scale(1.05);
+  position: relative;
+  z-index: 1;
+  margin: 20px 0;
 }
 
 /* Background Video Styling */
@@ -135,7 +49,7 @@ body {
   min-height: 100vh;
   object-fit: cover;
   z-index: -2;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .overlay {
@@ -144,117 +58,85 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(208, 232, 255, 0.5);
+  background: rgba(208, 232, 255, 0.4); /* More transparent */
   z-index: -1;
-  opacity: 0.7;
 }
 
-/* Footer */
+/* Button Container */
+.button-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button Styling */
+.glow-button {
+  flex: 0 1 220px; /* Don't grow, but can shrink */
+  background-color: white;
+  color: #003366;
+  border: 2px solid #ccc;
+  padding: 12px 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer - More Compact */
 .footer {
   background: linear-gradient(to right, #003366, #002244);
   color: #ffffff;
-  padding: 40px 10% 20px 10%;
-  font-size: 0.95rem;
+  padding: 20px 10%;
+  font-size: 0.9rem;
   margin: 0 auto;
-  max-width: 1400px;
-  width: 90%;
-  border-radius: 20px 20px 0 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: auto;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-section h3 {
-  margin-bottom: 15px;
-  color: #b3d4ff;
-}
-
-.footer-section p {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-.footer-section i {
-  color: #aad4ff;
-  margin-right: 10px;
-  width: 20px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-width: 150px;
-}
-
-.footer-logo img {
-  width: 80px;
-  height: auto;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #ffffff33;
-  color: #cccccc;
-  font-size: 0.85rem;
+  margin: 0 auto;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .title {
-    font-size: 1.6rem;
-  }
-
-  .glow-button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-  }
-
-  .footer-content {
+  .button-group {
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
   }
-
-  .footer-logo {
-    justify-content: flex-start;
-    margin-bottom: 20px;
+  
+  .glow-button {
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 15px 5%;
+  font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .glow-button {
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
-    width: 100%;
-  }
-
-  .title {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  .main-content {
-    padding: 40px 10px;
-    gap: 20px;
-  }
-
-  .logo-title-wrapper {
+  .footer-content {
     flex-direction: column;
-    gap: 10px;
-    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-section {
+    min-width: 100%;
   }
 }
