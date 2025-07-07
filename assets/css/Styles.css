@@ -130,7 +130,7 @@ body {
   background: linear-gradient(to right, #003366, #002244);
   color: #ffffff;
   padding: 10px 5px 5px 5px;
-  font-size: 0.85rem; /* Slightly smaller text */
+  font-size: 0.8rem; /* Slightly smaller text */
   margin: 0 auto;
   width: 85%; /* Narrower than full width (was 90%) */
   max-width: 1100px; /* Reduced from 1400px */
@@ -138,7 +138,13 @@ body {
 }
 
 .footer-content {
-  padding: 0; /* Remove any inner padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-section {
@@ -153,7 +159,7 @@ body {
 
 .footer-section p {
   margin-bottom: 8px;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .footer-section i {
@@ -175,8 +181,8 @@ body {
 }
 
 .footer-bottom {
-  margin-top: 10px; /* Reduced from 20px */
-  padding-top: 8px; /* Reduced from 10px */
+  margin-top: 8px; /* Reduced from 20px */
+  padding-top: 5px; /* Reduced from 10px */
 }
 
 /* Responsive Styles */
