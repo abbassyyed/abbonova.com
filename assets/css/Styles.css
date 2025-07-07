@@ -118,13 +118,6 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .glow-button {
-    font-size: 1rem; /* Slightly smaller font on very small devices */
-    padding: 12px 1.2rem;
-  }
-}
-
 .glow-button:hover {
   background-color: #f2eaff;
   color: #5a2ca0;
