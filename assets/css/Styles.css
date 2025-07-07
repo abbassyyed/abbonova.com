@@ -137,6 +137,7 @@ body {
   border-radius: 12px 12px 0 0; /* Smaller radius */
 }
 
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -148,18 +149,18 @@ body {
 }
 
 .footer-section {
-  margin-bottom: 10px; /* Reduce space between sections */
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-section h3 {
-  margin-bottom: 10px; /* Reduced from 15px */
-  font-size: 0.95rem; /* Smaller heading */
+  margin-bottom: 15px;
+  color: #b3d4ff;
 }
-
 
 .footer-section p {
   margin-bottom: 8px;
-  line-height: 1.2;
+  line-height: 1.6;
 }
 
 .footer-section i {
@@ -181,8 +182,12 @@ body {
 }
 
 .footer-bottom {
-  margin-top: 8px; /* Reduced from 20px */
-  padding-top: 5px; /* Reduced from 10px */
+  text-align: center;
+  margin-top: 1px;
+  padding-top: 2px;
+  border-top: 1px solid #ffffff33;
+  color: #cccccc;
+  font-size: 0.85rem;
 }
 
 /* Responsive Styles */
